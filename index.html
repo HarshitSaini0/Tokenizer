@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tokenizer Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="title">Tokenizer Visualizer</div>
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" title="Toggle theme">🌗</button>
+        <button id="resetAll" class="danger">Reset All</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="left">
+        <label class="label">Input</label>
+        <textarea id="inputText" placeholder="Type or paste text here..." rows="5"></textarea>
+
+        <div class="btn-row">
+          <button id="pasteBtn">Paste</button>
+          <button id="clearBtn">Clear All</button>
+          <div class="spacer"></div>
+          <button id="copyEncodedBtn">Copy Encoded</button>
+          <button id="copyDecodedBtn">Copy Decoded</button>
+          <!-- <button id="copyTokensBtn">Copy Tokens</button> -->
+        </div>
+
+        <div class="decode-by-index">
+          <label>Decode token index</label>
+          <div class="inline-row">
+            <input id="indexInput" type="number" placeholder="Enter index (e.g. 3)" />
+            <div class="btn-row">
+              <button id="getDecodedBtn">Get</button>
+
+              <div id="indexDecoded" class="pill">—</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="right">
+        <div class="card">
+          <h3>Encoded Array</h3>
+          <pre id="encodedOutput">[]</pre>
+        </div>
+
+        <div class="card">
+          <h3>Decoded Array</h3>
+          <pre id="decodedOutput">[]</pre>
+        </div>
+
+        <!-- <div class="card tokens-card">
+          <div class="card-head">
+            <h3>Library of Tokens</h3>
+            <small class="muted">Persistent via cookies</small>
+          </div>
+          <pre id="libraryOutput">[]</pre>
+        </div> -->
+      </section>
+    </main>
+
+    <footer class="footer">Made with ❤️ </footer>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
