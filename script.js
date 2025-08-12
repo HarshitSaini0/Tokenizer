@@ -1,5 +1,6 @@
 // script.js — UI glue
 import { libraryOfTokens, encode, decode, splitTheString } from './tokenizer.js';
+import { linkValues } from './linkValues.js'; // <-- Add this import
 
 // --- cookie helpers (JSON cookie with expiry) ---
 function setCookieJSON(name, value, days = 365) {
@@ -41,6 +42,7 @@ const getDecodedBtn = $id('getDecodedBtn');
 const indexDecoded = $id('indexDecoded');
 const resetAll = $id('resetAll');
 const themeToggle = $id('themeToggle');
+const githubBtn = $id('githubBtn');
 
 // sanity check
 if(!inputText || !encodedOutput || !decodedOutput || !libraryOutput){
@@ -172,6 +174,11 @@ resetAll && resetAll.addEventListener('click', () => {
   deleteCookie(TOKEN_COOKIE);
   updateAllDisplays();
   flash('All tokens cleared');
+});
+
+githubBtn && githubBtn.addEventListener('click', () => {
+  const url = linkValues["github.com"];
+  if (url) window.open(url, '_blank', 'noopener');
 });
 
 // --- clipboard fallback ---

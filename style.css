@@ -26,8 +26,25 @@ body{background:var(--bg);color:var(--text);padding:24px;display:flex;align-item
 .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
 .topbar .title{font-weight:700;font-size:1.1rem}
 .topbar .controls{display:flex;gap:8px}
-.icon-btn{background:transparent;border:none;padding:8px;border-radius:8px;cursor:pointer}
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
 .icon-btn:hover{background:var(--glass)}
+.icon-btn svg {
+  display: block;
+  color: var(--text);
+}
+[data-theme='dark'] .icon-btn svg {
+  color: #e6eef8;
+}
 .danger{background:transparent;border:1px solid var(--danger);color:var(--danger);padding:8px 12px;border-radius:10px;cursor:pointer}
 .danger:hover{filter:brightness(1.05)}
 
