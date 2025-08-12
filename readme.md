@@ -2,7 +2,7 @@
 
 A simple web-based tool to visualize how tokenization works, built as an assignment project.
 ## Live Link
-**[Click here]('https://chaicode-tokenizer.netlify.app/')**
+[Click here](https://chaicode-tokenizer.netlify.app/)
 ## Features
 
 - **Live Tokenization:**  
